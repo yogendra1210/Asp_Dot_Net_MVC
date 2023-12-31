@@ -27,3 +27,21 @@
     </tbody>
 </table>
 
+
+<!--Razor Syntax Rule-->
+
+<!--Single Statement Block-->
+@{ var message = "Do You Like This Tutorial";}
+
+<!--Inline Expression or Variable-->
+<p>The Value Of My Message is : @message</p>
+
+<!--Multi Statement Block-->
+@{
+    var greeting = "Welocome To MVC Tutorials";
+    var weekday = DateTime.Now.DayOfWeek;
+    var greetingMsg = greeting + " You are watching this on " + weekday;
+}
+
+<p>Greeting Message is : @greetingMsg</p>
+
