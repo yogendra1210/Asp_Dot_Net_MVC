@@ -14,5 +14,7 @@ namespace WebApplication.Models
         public string Address { get; set; }
         public string  DepartmentName { get; set; }
 
+        public bool remember { get; set; }
+
     }
 }

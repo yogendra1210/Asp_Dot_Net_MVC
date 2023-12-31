@@ -1,0 +1,21 @@
+﻿@model WebApplication.Models.EmployeeViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+@Html.DropDownListFor(
+    model => model.DepartmentName,
+    ViewBag.DepartmentList as SelectList,
+    "-- Select Department --",
+    new { @class="form-control"}
+    )
+@Html.TextBoxFor(model=>model.EmpName,new{@class="form-control",@placeholder="Enter Name (FirstName Only)"})
+@Html.TextBoxFor(model=>model.Address,new { @class="form-control",@placeholder="Enter Address(For e.g. Pune, Mumbai)"})
+<div class="checkbox">
+    <label>
+    @Html.CheckBoxFor(model => model.remember) check out this
+    </label>
+</div>
+    <input type="submit" value="Submit" class="btn btn-block btn-primary"/>
+</div>
