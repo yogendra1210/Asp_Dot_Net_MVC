@@ -130,6 +130,7 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\EmployeeDetailsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HtmlHelperController.cs" />
     <Compile Include="Controllers\TempDataController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
@@ -220,6 +221,7 @@
     <Content Include="Views\EmployeeDetails\Index.cshtml" />
     <Content Include="Views\EmployeeDetails\GetAllEmployee.cshtml" />
     <Content Include="Views\EmployeeDetails\GetEmployeeInfo.cshtml" />
+    <Content Include="Views\HtmlHelper\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
