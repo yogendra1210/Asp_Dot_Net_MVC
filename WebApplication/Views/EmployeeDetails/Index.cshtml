@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WebApplication.Models.Employee>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employee Details</h2>
+
+
+<table class="table table-striped" align="center">
+    <tr style="border:1px solid black">
+        <th>Employee Id</th>
+        <th>Emplpoyee Name</th>
+        <th>Address</th>
+        <th>Department Id</th>
+        <th>Department Name</th>
+        <th>Action</th>
+    </tr>
+    <tbody>
+          @foreach(var item in Model)
+          {  
+        <tr style="border:1px solid black">
+            <td>@item.EmpId</td>
+            <td>@item.EmpName</td>
+            <td>@item.Address</td>
+            <td>@item.Department.DeptId</td>
+            <td>@item.Department.DeptName</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.EmpId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.EmpId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.EmpId })
+            </td>
+        </tr>
+          }
+            
+    </tbody>
+</table>

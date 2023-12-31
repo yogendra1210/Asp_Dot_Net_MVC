@@ -1,0 +1,30 @@
+﻿@model WebApplication.Models.EmployeeViewModel
+@{
+    ViewBag.Title = "GetEmployeeInfo";
+}
+
+<h2>Employee Details : </h2>
+
+
+<table class="table table-striped" align="center">
+    @if (Model != null)
+    {
+    <tr>
+        <th>@Html.DisplayNameFor(modelItem => Model.EmpId)</th>
+        <th>@Html.DisplayNameFor(modelItem => Model.EmpName)</th>
+        <th>@Html.DisplayNameFor(modelItem => Model.Address)</th>
+        <th>@Html.DisplayNameFor(modelItem => Model.DeptId)</th>
+        <th>@Html.DisplayNameFor(modelItem => Model.DepartmentName)</th>
+
+    </tr>
+    <tbody>
+        <tr>
+            <td>@Html.DisplayFor(modelItem => Model.EmpId)</td>
+            <td>@Html.DisplayFor(modelItem => Model.EmpName)</td>
+            <td>@Html.DisplayFor(modelItem => Model.Address)</td>
+            <td>@Html.DisplayFor(modelItem => Model.DeptId)</td>
+            <td>@Html.DisplayFor(modelItem => Model.DepartmentName)</td>
+        </tr>
+    </tbody>
+    }
+</table>

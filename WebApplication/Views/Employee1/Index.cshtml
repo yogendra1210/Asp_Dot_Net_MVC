@@ -1,0 +1,26 @@
+﻿@model WebApplication.Models.Employee
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<table class="table table-striped" align="center">
+    <tr style="border:1px solid black">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Department</th>
+    </tr>
+    <tbody>
+       <!--Type casting requies in ViewData, ViewBag does not requires typecasting-->
+       <!--ViewData requies Null check to avoid error, whereas ViewBag does not require null check-->
+        @foreach (var item in ViewData["ListEmp"] as List<WebApplication.Models.Employee>)
+            {
+                <tr style="border:1px solid black">
+                    <td>@item.EmpId</td>
+                    <td>@item.EmpName</td>
+                    <td>@item.Address</td>
+                </tr>
+            }
+    </tbody>
+</table>
+
